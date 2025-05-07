@@ -4,17 +4,7 @@ This is the developer theme for [JSON Resume](http://jsonresume.org/), based off
 
 ## Changes
 
-Added three sections - profiles, projects and certifications.
-
-Added print break compatibility for sections.
-
-Added new profiles design.
-
-Added designation to header.
-
-Added new sanitization for URL links.
-
-Added boldness to key terms, send wrapped inside strong tag.
+Added spanish by default
 
 
 
