@@ -1,19 +1,20 @@
 {
-  "name": "jsonresume-theme-dev-ats",
+  "name": "jsonresume-theme-dev-ats-es",
   "version": "1.0.1",
-  "description": "JSON Resume theme for developers",
+  "description": "Tema JSONResume compatible con ATS para desarrolladores",
   "keywords": [
     "jsonresume",
     "jsonresume-theme",
     "json",
     "resume",
     "theme",
-    "cv"
+    "cv",
+    "es"
   ],
-  "author": "Ashique Kainote",
+  "author": "Freddy Huaylla",
   "repository": {
     "type": "git",
-    "url": "https://github.com/asqrzk/jsonresume-theme-dev-ats"
+    "url": "https://github.com/asqrzk/jsonresume-theme-dev-ats-es"
   },
   "license": "MIT",
   "scripts": {
