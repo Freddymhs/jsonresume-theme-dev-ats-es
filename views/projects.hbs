@@ -3,27 +3,29 @@
   <h2>Proyectos Destacados</h2>
   <div class="item">
     {{#each resume.projects}}
-      {{#if name}}{{#if description}}
-        
-        {{#if url}}
-          {{#> item
-            title=name
-            subtitle=description
-            url=url
-            mainUrl='y'
-          }}
-          {{/item}}
-        {{else}}
-          {{#> item
-            title=name
-            subtitle=description
-            url=''
-            mainUrl=''
-          }}
-          {{/item}}
-        {{/if}}{{/if}}
-        
-      {{/if}}
+    {{#if name}}{{#if description}}
+
+    {{#if url}}
+    {{#> item
+    title=name
+    subtitle=description
+    url=url
+    mainUrl='y'
+    githubUrl=githubUrl
+    }}
+    {{/item}}
+    {{else}}
+    {{#> item
+    title=name
+    subtitle=description
+    url=''
+    mainUrl=''
+    githubUrl=''
+    }}
+    {{/item}}
+    {{/if}}{{/if}}
+
+    {{/if}}
     {{/each}}
   </div>
 </section>

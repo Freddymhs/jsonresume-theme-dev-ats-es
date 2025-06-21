@@ -1,23 +1,28 @@
 <div class="item-details">
-    {{#if location}}
-    <div class="item-details-title">
-        {{location}}
-    </div>
-    {{/if}}
-    {{#if startDate}}
-    {{#if endDate}}
-    <div class="date">
-        {{formatDate startDate}} — {{formatDate endDate}}
-    </div>
-    {{else}}
-    <div class="date">
-        {{formatDate startDate}} — Presente
-    </div>
-    {{/if}}
-    {{/if}}
-    {{#if mainUrl}}
-    <div class="url">
-        [{{wrapURL url}}]
-    </div>
-    {{/if}}
+  {{#if location}}
+  <div class="item-details-title">
+    {{location}}
+  </div>
+  {{/if}}
+  {{#if startDate}}
+  {{#if endDate}}
+  <div class="date">
+    {{formatDate startDate}} — {{formatDate endDate}}
+  </div>
+  {{else}}
+  <div class="date">
+    {{formatDate startDate}} — Presente
+  </div>
+  {{/if}}
+  {{/if}}
+  {{#if mainUrl}}
+  <div class="url">
+    [{{wrapURL url}}]
+  </div>
+  {{/if}}
+  {{#if githubUrl}}
+  <div class="url">
+    [{{wrapURL githubUrl}}]
+  </div>
+  {{/if}}
 </div>
