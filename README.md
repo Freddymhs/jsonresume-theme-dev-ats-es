@@ -4,7 +4,10 @@ This is the developer theme for [JSON Resume](http://jsonresume.org/), based off
 
 ## Changes
 
-Added spanish by default
+- Español por defecto.
+- Las URLs se limpian: se ignoran vacías y se agrega `https://` si no hay protocolo.
+- Migrado a `resumed-cli` y Node 18 (Volta) para servir/exportar el tema.
+- Se ocultan proyectos opcionales con `published: false`.
 
 
 
