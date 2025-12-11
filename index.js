@@ -66,6 +66,11 @@ function render(resume) {
     css = fs.readFileSync(dir + "/style.css", "utf-8"),
     resumeTemplate = fs.readFileSync(dir + "/resume.hbs", "utf-8");
 
+  // Filtrar proyectos con published: false
+  if (resume.projects) {
+    resume.projects = resume.projects.filter(p => p.published !== false);
+  }
+
   let Handlebars = handlebarsWax(handlebars);
 
   Handlebars.partials(dir + "/views/**/*.{hbs,js}");
