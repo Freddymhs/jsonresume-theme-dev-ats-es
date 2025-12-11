@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-dev-ats-es",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tema JSONResume compatible con ATS para desarrolladores",
   "keywords": [
     "jsonresume",
@@ -18,8 +18,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "resume serve --theme .",
-    "export": "resume export --theme . resume.pdf"
+    "start": "resumed serve --theme .",
+    "export": "resumed export --theme . resume.pdf"
   },
   "dependencies": {
     "address-format": "0.0.3",
@@ -29,6 +29,9 @@
     "swag": "^0.7.0"
   },
   "devDependencies": {
-    "resume-cli": "^3.1.2"
+    "resumed-cli": "^2.1.9"
+  },
+  "volta": {
+    "node": "18.20.5"
   }
 }

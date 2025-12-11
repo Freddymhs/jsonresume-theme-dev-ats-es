@@ -11,10 +11,15 @@ Swag.registerHelpers(handlebars);
 
 handlebars.registerHelper({
   wrapURL: function (url) {
-    if (url === null || url === "" || url === "") return "";
-    let validUrl;
-    validUrl = new URL(url);
-    const escapedUrl = handlebars.escapeExpression(url);
+    if (url === null || url === "" || url === undefined) return "";
+
+    // Si la URL no tiene protocolo, agregar https://
+    let validUrl = url;
+    if (!url.match(/^[a-zA-Z]+:\/\//)) {
+      validUrl = "https://" + url;
+    }
+
+    const escapedUrl = handlebars.escapeExpression(validUrl);
     const displayUrl = escapedUrl.replace(/.*?:\/\//g, "");
     const wrappedUrl = `<a href="${escapedUrl}">${displayUrl}</a>`;
     return new handlebars.SafeString(wrappedUrl);
