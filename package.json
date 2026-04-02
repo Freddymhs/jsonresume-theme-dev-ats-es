@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-dev-ats-es",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Tema JSONResume compatible con ATS para desarrolladores",
   "keywords": [
     "jsonresume",
@@ -14,10 +14,11 @@
   "author": "Freddy Huaylla",
   "repository": {
     "type": "git",
-    "url": "https://github.com/asqrzk/jsonresume-theme-dev-ats-es"
+    "url": "https://github.com/Freddymhs/jsonresume-theme-dev-ats-es"
   },
   "license": "MIT",
   "scripts": {
+    "publish": "npm publish",
     "start": "resumed serve --theme .",
     "export": "resumed export --theme . resume.pdf"
   },
