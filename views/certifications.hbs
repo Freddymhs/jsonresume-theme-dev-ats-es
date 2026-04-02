@@ -5,7 +5,7 @@
         {{#each resume.certificates}}
         <li>
             {{#if name}}
-            <strong>{{name}}</strong> {{#if issuer}}: {{issuer}} {{/if}}
+            <strong>{{formatCertName name}}</strong> {{#if issuer}}: {{issuer}} {{/if}}
             {{/if}}
         </li>
         {{/each}}

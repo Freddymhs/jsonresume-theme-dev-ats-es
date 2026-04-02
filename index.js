@@ -43,9 +43,11 @@ handlebars.registerHelper({
   },
 
   formatDate: function (date) {
-    if (moment(date).isValid()) {
-      return moment(date).format("MMM YYYY");
-    } else return "Presente";
+    if (!date || date === "-infinite-" || date === "") return "Presente";
+    if (moment(date, ["YYYY-MM", "YYYY-MM-DD"], true).isValid()) {
+      return moment(date, ["YYYY-MM", "YYYY-MM-DD"]).format("MM/YYYY");
+    }
+    return "Presente";
   },
 
   even: function (index) {
@@ -59,6 +61,10 @@ handlebars.registerHelper({
   length: function (array) {
     return array.length;
   },
+
+  formatCertName: function (name) {
+    return name.replace(/-/g, " ");
+  },
 });
 
 function render(resume) {
@@ -68,7 +74,7 @@ function render(resume) {
 
   // Filtrar proyectos con published: false
   if (resume.projects) {
-    resume.projects = resume.projects.filter(p => p.published !== false);
+    resume.projects = resume.projects.filter((p) => p.published !== false);
   }
 
   let Handlebars = handlebarsWax(handlebars);
