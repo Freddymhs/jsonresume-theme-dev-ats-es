@@ -18,7 +18,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "publish": "npm publish",
+    "push-to-npm": "publish",
     "start": "resumed serve --theme .",
     "export": "resumed export --theme . resume.pdf"
   },
