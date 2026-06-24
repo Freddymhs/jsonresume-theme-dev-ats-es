@@ -72,6 +72,17 @@ npm run export
 
 Alternatively, you can also do a **print page** on the browser and save it as as PDF (by setting margins to none and removing header/footers.)
 
+## Publishing
+
+Release a new version to npm (requires a 2FA OTP from your authenticator, or a recovery code):
+
+```
+npm run release -- <OTP>
+```
+
+This bumps the patch version, publishes to npm, and pushes the git tag.
+On publish failure it rolls back the version bump automatically.
+
 ## Contribute
 
 Currently, this theme is still based on the old [jsonresume-theme-boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate), so a look at the README will give you an overview of the files involved in theme modification.

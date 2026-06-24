@@ -19,7 +19,8 @@
   "license": "MIT",
   "scripts": {
     "start": "resumed serve --theme .",
-    "export": "resumed export --theme . resume.pdf"
+    "export": "resumed export --theme . resume.pdf",
+    "release": "bash release.sh"
   },
   "dependencies": {
     "address-format": "0.0.3",
