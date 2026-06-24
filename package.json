@@ -18,7 +18,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "push-to-npm": "publish",
+    "release": "npm version patch && npm publish && git push --follow-tags",
     "start": "resumed serve --theme .",
     "export": "resumed export --theme . resume.pdf"
   },
