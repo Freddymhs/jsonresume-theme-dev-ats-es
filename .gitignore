@@ -5,3 +5,6 @@ resume.pdf
 resume.json
 .DS_Store
 public
+resume-preview.html
+.serena/
+.codegraph/

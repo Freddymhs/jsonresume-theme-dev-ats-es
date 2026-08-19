@@ -1,5 +1,5 @@
 {
-  "name": "jsonresume-theme-dev-ats-es",
+  "name": "@freddymhs/jsonresume-theme-dev-ats-es",
   "version": "1.0.7",
   "description": "Tema JSONResume compatible con ATS para desarrolladores",
   "keywords": [
@@ -17,10 +17,13 @@
     "url": "https://github.com/Freddymhs/jsonresume-theme-dev-ats-es"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "resumed serve --theme .",
-    "export": "resumed export --theme . resume.pdf",
-    "release": "bash release.sh"
+    "export": "resumed export -F --theme . --resume ../fmarcosdev.api.resume/resume.json resume.pdf",
+    "local-test": "resumed export -F --theme . --resume ../fmarcosdev.api.resume/resume.json --format html resume-preview.html && xdg-open resume-preview.html"
   },
   "dependencies": {
     "address-format": "0.0.3",

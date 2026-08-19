@@ -74,14 +74,18 @@ Alternatively, you can also do a **print page** on the browser and save it as as
 
 ## Publishing
 
-Release a new version to npm (requires a 2FA OTP from your authenticator, or a recovery code):
+Releases son automáticos via GitHub Actions + [semantic-release](https://github.com/semantic-release/semantic-release).
 
-```
-npm run release -- <OTP>
-```
+Cada push a `main` con commits [Conventional Commits](https://www.conventionalcommits.org/) dispara:
 
-This bumps the patch version, publishes to npm, and pushes the git tag.
-On publish failure it rolls back the version bump automatically.
+| prefijo | bump |
+|---|---|
+| `feat:` | minor (`1.0.7` → `1.0.8`) |
+| `fix:` | patch (`1.0.7` → `1.0.8`) |
+| `feat!:` o `BREAKING CHANGE:` | major (`1.0.7` → `2.0.0`) |
+| `chore:`, `docs:`, etc. | sin release |
+
+El workflow actualiza `package.json`, `CHANGELOG.md`, crea tag y GitHub Release, y publica a npm via [Trusted Publishing](https://docs.npmjs.com/trusted-publishers) (OIDC, sin tokens persistentes).
 
 ## Contribute
 
