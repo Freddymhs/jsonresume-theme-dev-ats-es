@@ -1,10 +1,15 @@
 node_modules/
 npm-debug.log
 resume.html
+resume-preview.html
 resume.pdf
 resume.json
 .DS_Store
 public
 .claude/
+.serena/
+.codegraph/
+.fallow/
 .github/
+Makefile
 *.png
