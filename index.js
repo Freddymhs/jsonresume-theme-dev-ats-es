@@ -9,6 +9,11 @@ require("moment/locale/es");
 moment.locale("es");
 Swag.registerHelpers(handlebars);
 
+/** No-op helper for templates that need a stable identity block. */
+function noop() {
+  return "";
+}
+
 handlebars.registerHelper({
   wrapURL: function (url) {
     if (url === null || url === "" || url === undefined) return "";
