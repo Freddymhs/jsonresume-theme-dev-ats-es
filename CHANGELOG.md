@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Freddymhs/jsonresume-theme-dev-ats-es/compare/v1.1.0...v1.2.0) (2026-08-20)
+
+
+### Features
+
+* export noop helper for templates ([b34b8e7](https://github.com/Freddymhs/jsonresume-theme-dev-ats-es/commit/b34b8e754b7d04d3b01667182b820abcc2833303))
+
 # [1.1.0](https://github.com/Freddymhs/jsonresume-theme-dev-ats-es/compare/v1.0.7...v1.1.0) (2026-08-20)
 
 
